@@ -1,0 +1,19 @@
+public class StringBufferAndBuilderDemo {
+    public static void main(String[] args) {
+        // Using StringBuffer
+        StringBuffer stringBuffer = new StringBuffer("Hello");
+        stringBuffer.append(" World");
+        stringBuffer.insert(5, ",");
+        stringBuffer.replace(6, 7, "there");
+        stringBuffer.delete(5, 6);
+        System.out.println("StringBuffer: " + stringBuffer);
+
+        // Using StringBuilder
+        StringBuilder stringBuilder = new StringBuilder("Hello");
+        stringBuilder.append(" World");
+        stringBuilder.insert(5, ",");
+        stringBuilder.replace(6, 7, "there");
+        stringBuilder.delete(5, 6);
+        System.out.println("StringBuilder: " + stringBuilder);
+    }
+}
