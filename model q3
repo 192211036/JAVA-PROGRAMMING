@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class collectiondemo {
+    public static void main(String[] args) {
+        // LinkedList demonstration
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Apple");
+        linkedList.add("Banana");
+        linkedList.add("Orange");
+        linkedList.add("Mango");
+
+        System.out.println("LinkedList:");
+        for (String fruit : linkedList) {
+            System.out.println(fruit);
+        }
+        System.out.println();
+
+        // TreeSet demonstration
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(5);
+        treeSet.add(2);
+        treeSet.add(8);
+        treeSet.add(1);
+        treeSet.add(10);
+
+        System.out.println("TreeSet:");
+        for (Integer num : treeSet) {
+            System.out.println(num);
+        }
+        System.out.println();
+
+        // HashMap demonstration
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "John");
+        hashMap.put(2, "Alice");
+        hashMap.put(3, "Bob");
+        hashMap.put(4, "Emma");
+
+        System.out.println("HashMap:");
+        for (Map.Entry<Integer, String> entry : hashMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
