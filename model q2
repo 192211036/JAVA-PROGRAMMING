@@ -1,0 +1,27 @@
+// Outer class
+class Outer {
+    // Instance variable of the outer class
+    private int outerData = 10;
+
+    // Inner class
+    class Inner {
+        // Method of the inner class accessing the outer class's data
+        void display() {
+            System.out.println("Value of outerData: " + outerData);
+        }
+    }
+}
+
+// Main class
+public class innerclass{
+    public static void main(String[] args) {
+        // Creating an instance of the outer class
+        Outer outerObj = new Outer();
+
+        // Creating an instance of the inner class using the outer class instance
+        Outer.Inner innerObj = outerObj.new Inner();
+
+        // Invoking method of the inner class
+        innerObj.display();
+    }
+}
