@@ -1,0 +1,38 @@
+// Parent class
+class Parent {
+    int num = 100;
+
+    // display method of superclass
+    void display() {
+        System.out.println("This is the display method of the Parent class.");
+    }
+}
+
+// Subclass extending Parent
+class Child extends Parent {
+    int num = 200;
+
+    // display method of subclass
+    void display() {
+        // invoking the display() method of superclass
+        super.display();
+        System.out.println("This is the display method of the Child class.");
+    }
+
+    void printNum() {
+        // accessing the num variable of superclass
+        System.out.println("Value of num in superclass: " + super.num);
+        // accessing the num variable of subclass
+        System.out.println("Value of num in subclass: " + num);
+    }
+}
+
+// Main class to demonstrate super keyword
+public class Main {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.display(); // Calls the display method of the Child class
+        System.out.println();
+        obj.printNum(); // Calls the printNum method of the Child class
+    }
+}
